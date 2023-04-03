@@ -10,3 +10,42 @@ pip install "fastapi[all]" --proxy http://hesil:@Erick0112@proxy.inf.bndes.net:8
 python3 -m pip freeze > ..\requirements.txt
 
 pip install -r requirements.txt.
+
+#Passos para subir para o github
+Tenha certeza que o seu git está instalado. No terminal ou prompt de comando cheque através do comando git -v
+
+No GitHub, crie um novo repositório. Na tela onde pede para fazer upload ou criar aquivos, guarde o link HTTPS que será geradoGitHub
+
+Abra o Git Bash ou terminal na pasta onde está o seu projeto
+
+Inicie a pasta como um repositório do Git através do comando:
+git init
+
+Em seguida, adicione os arquivos de configuração para preparar o commit:
+git add .
+
+Opcional: Adicione um arquivo readme caso não tenha iniciado o repositório com ele:
+git add README.md
+
+Crie um novo commit para os arquivos que irá subir para o repositório:
+git commit -m "first commit"
+
+Suba seus arquivos utilizando a URL gerada no passo 2 no seguinte comando:
+git remote add origin URL-GERADA-PELO-PASSO-2-AQUI
+
+Autorize o upload com seu login e senha:
+git push -u origin master
+
+
+
+1 - Criar repositório no site do github
+2 - Criar arquivo .gitignore
+2 - Executar os comando abaixo para subir os arquivos para o github
+  cd .\fastapi-orm-python\
+  git init
+  git add .
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin https://github.com/henriquebdasilva/fastapi-orm-python.git
+  git config --global http.proxy http://hesil:@Erick0112@proxy.inf.bndes.net:8080
+  git push -u origin main
