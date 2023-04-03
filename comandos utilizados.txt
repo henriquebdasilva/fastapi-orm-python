@@ -5,11 +5,20 @@ cd .\Scripts\
 
 .\activate.bat
 
-pip install "fastapi[all]" --proxy http://hesil:@Erick0112@proxy.inf.bndes.net:8080
+./python -m pip install fastapi
 
-python3 -m pip freeze > ..\requirements.txt
+./python -m pip install uvicorn
+
+#pip install "fastapi[all]" --proxy http://hesil:@Erick0112@proxy.inf.bndes.net:8080
+
+..\Scripts\python -m pip install sqlalchemy
+
+./python -m pip freeze > ..\requirements.txt
 
 pip install -r requirements.txt.
+
+--Iniciar o app fastapi
+..\Scripts\python -m uvicorn main:app --port 8080 --reload
 
 
 -- Passos para colocar o projeto no github
