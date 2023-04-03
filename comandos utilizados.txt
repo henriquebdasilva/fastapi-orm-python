@@ -49,3 +49,7 @@ git push -u origin master
   git remote add origin https://github.com/henriquebdasilva/fastapi-orm-python.git
   git config --global http.proxy http://hesil:@Erick0112@proxy.inf.bndes.net:8080
   git push -u origin main
+
+git status
+git add "comandos utilizados.txt"
+git commit -m "comandos utilizados.txt"
